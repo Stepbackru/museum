@@ -1,1 +1,80 @@
-@import './assets/css/clear.scss';
+@import './assets/css/clear.scss', './assets/css/constants.scss', './assets/css/mixins.scss';
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 240px;
+  max-width: 1920px;
+  height: 100%;
+}
+
+.header {
+  margin: 0 auto;
+  width: 1920px;
+  height: 200px;
+  background: $header-bg;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__row {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  max-width: 195px;
+  height: 100%;
+  display: flex;
+
+  &__image {
+    width: 49px;
+    height: 49px;
+    display: block;
+  }
+
+  &__link {
+    padding-left: 21px;
+    width: 125px;
+    height: 100%;
+    display: block;
+    line-height: 50px;
+  }
+
+  &__caption {
+    @include forumFont(28px);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+}
+
+.menu {
+  width: 720px;
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    &:hover {
+      border-bottom: 1px solid #ffffff;
+      transition: .3s;
+    }
+  }
+
+  &__link {
+    padding: 3px 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    @include robotoFont(22px, 200);
+    letter-spacing: 2px;
+  }
+}
