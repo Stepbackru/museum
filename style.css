@@ -38,8 +38,6 @@ ul {
 }
 
 .header {
-  margin: 0 auto;
-  width: 1920px;
   height: 200px;
   background: #030303;
 }
@@ -99,7 +97,10 @@ ul {
 }
 
 .menu {
-  width: 720px;
+  max-width: 720px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .menu__list {
@@ -114,12 +115,6 @@ ul {
           align-items: center;
 }
 
-.menu__item:hover {
-  border-bottom: 1px solid #ffffff;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
 .menu__link {
   padding: 3px 0;
   width: 100%;
@@ -130,5 +125,9 @@ ul {
   font-size: 22px;
   font-weight: 200;
   letter-spacing: 2px;
+}
+
+.menu__link:hover, .menu__link:active {
+  color: #9d8665;
 }
 /*# sourceMappingURL=style.css.map */

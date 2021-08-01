@@ -8,8 +8,6 @@
 }
 
 .header {
-  margin: 0 auto;
-  width: 1920px;
   height: 200px;
   background: $dark-bg;
 
@@ -54,19 +52,13 @@
 }
 
 .menu {
-  width: 720px;
+  max-width: 720px;
+  flex-grow: 1;
   
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__item {
-    &:hover {
-      border-bottom: 1px solid #ffffff;
-      transition: .3s;
-    }
   }
 
   &__link {
@@ -76,5 +68,10 @@
     display: block;
     @include robotoFont(22px, 200);
     letter-spacing: 2px;
+
+    &:hover,
+    &:active {
+      color: $dark-red;
+    }
   }
 }
