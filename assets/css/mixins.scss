@@ -8,6 +8,8 @@
     size: $fz;
     weight: 400;
   }
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 @mixin robotoFont($fz, $fw, $color: #ffffff) {

@@ -46,8 +46,6 @@
 
   &__caption {
     @include forumFont(28px);
-    text-transform: uppercase;
-    letter-spacing: 5px;
   }
 }
 
@@ -90,8 +88,6 @@
   &__caption {
     padding-bottom: 26px;
     @include forumFont(80px);
-    text-transform: uppercase;
-    letter-spacing: 5px;
   }
 
   &__text {
@@ -121,8 +117,6 @@
   &__caption {
     position: relative;
     @include forumFont(80px, $font-gold);
-    text-transform: uppercase;
-    letter-spacing: 5px;
 
     &::after {
       content: "";
@@ -167,8 +161,6 @@
     padding-top: 25px;
     position: relative;
     @include forumFont(32px, $dark-font);
-    text-transform: uppercase;
-    letter-spacing: 5px;
     
     &::after {
       content: "";
