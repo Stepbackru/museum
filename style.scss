@@ -71,7 +71,44 @@
 
     &:hover,
     &:active {
-      color: $dark-red;
+      color: $font-gold;
     }
+  }
+}
+
+.welcome {
+  max-height: 750px;
+  background-color: $dark-bg;
+  background-image: url(./assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 352px);
+
+  .wrapper {
+    padding: 114px 0 246px 240px;
+  }
+
+  &__caption {
+    padding-bottom: 26px;
+    @include forumFont(80px);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  &__text {
+    padding-bottom: 77px;
+    @include robotoFont(28px, 300);
+    letter-spacing: 2px;
+  }
+
+  &__link {
+    width: 360px;
+    height: 75px;
+    display: block;
+    line-height: 75px;
+    background: $dark-red;
+    border-radius: 10px;
+    @include robotoFont(22px, 200);
+    text-align: center;
+    letter-spacing: 2px;
   }
 }

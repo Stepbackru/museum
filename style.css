@@ -130,4 +130,50 @@ ul {
 .menu__link:hover, .menu__link:active {
   color: #9d8665;
 }
+
+.welcome {
+  max-height: 750px;
+  background-color: #030303;
+  background-image: url(./assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 352px);
+}
+
+.welcome .wrapper {
+  padding: 114px 0 246px 240px;
+}
+
+.welcome__caption {
+  padding-bottom: 26px;
+  color: #ffffff;
+  font-family: 'Forum', cursive;
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.welcome__text {
+  padding-bottom: 77px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.welcome__link {
+  width: 360px;
+  height: 75px;
+  display: block;
+  line-height: 75px;
+  background: #710707;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 2px;
+}
 /*# sourceMappingURL=style.css.map */
