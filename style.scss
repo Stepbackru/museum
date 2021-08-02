@@ -37,15 +37,28 @@
   }
 
   &__link {
-    padding-left: 21px;
+    display: flex;
     width: 125px;
     height: 100%;
-    display: block;
     line-height: 50px;
+
+    &:hover > .logo__caption {
+      color: $font-gold;
+    }
+
+    &:hover > .logo__image {
+      filter: invert(55%) sepia(16%) saturate(704%) hue-rotate(356deg) brightness(95%) contrast(89%);
+    }
   }
 
   &__caption {
+    padding-left: 21px;
     @include forumFont(28px);
+    transition: .3s;
+  }
+
+  &__image {
+    transition: .3s;
   }
 }
 

@@ -86,20 +86,38 @@ ul {
 }
 
 .logo__link {
-  padding-left: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 125px;
   height: 100%;
-  display: block;
   line-height: 50px;
 }
 
+.logo__link:hover > .logo__caption {
+  color: #9d8665;
+}
+
+.logo__link:hover > .logo__image {
+  -webkit-filter: invert(55%) sepia(16%) saturate(704%) hue-rotate(356deg) brightness(95%) contrast(89%);
+          filter: invert(55%) sepia(16%) saturate(704%) hue-rotate(356deg) brightness(95%) contrast(89%);
+}
+
 .logo__caption {
+  padding-left: 21px;
   color: #ffffff;
   font-family: 'Forum', cursive;
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.logo__image {
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .menu {
