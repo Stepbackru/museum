@@ -75,7 +75,6 @@
 }
 
 .welcome {
-  max-height: 750px;
   background-color: $dark-bg;
   background-image: url(./assets/images/background.jpg);
   background-repeat: no-repeat;
@@ -111,7 +110,6 @@
 
 .visiting {
   padding: 75px 0;
-  max-height: 1266px;
   background: $light-bg;
 
   &__caption {
@@ -187,7 +185,6 @@
 
 .explore {
   padding: 75px 0;
-  max-height: 865px;
   background: $dark-bg;
 
   .wrapper {

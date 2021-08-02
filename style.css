@@ -132,7 +132,6 @@ ul {
 }
 
 .welcome {
-  max-height: 750px;
   background-color: #030303;
   background-image: url(./assets/images/background.jpg);
   background-repeat: no-repeat;
@@ -179,7 +178,6 @@ ul {
 
 .visiting {
   padding: 75px 0;
-  max-height: 1266px;
   background: #e5e5e5;
 }
 
@@ -275,7 +273,6 @@ ul {
 
 .explore {
   padding: 75px 0;
-  max-height: 865px;
   background: #030303;
 }
 
