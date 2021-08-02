@@ -562,3 +562,48 @@
     }
   }
 }
+
+.contacts {
+  padding: 73.5px 0;
+  background: $light-bg;
+
+  &__caption {
+    margin-bottom: 105px;
+    position: relative;
+    @include forumFont(80px, $font-gold);
+
+    &::after {
+      content: "";
+      height: 3px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -30px;
+      background: $dark-red;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-basis: 720px;
+    justify-content: space-between;
+  }
+
+  &__subcaption {
+    padding: 10px 0 34px;
+    @include robotoFont(28px, 500, $dark-font);
+  }
+
+  &__item {
+    @include robotoFont(22px, 300, $dark-font);
+  }
+
+  &__item:nth-child(2n) {
+    padding: 19px 0;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $font-gold;
+  }
+}
