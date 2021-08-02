@@ -118,6 +118,10 @@
     @include robotoFont(22px, 200);
     text-align: center;
     letter-spacing: 2px;
+
+    &:hover {
+      background: $font-gold;
+    }
   }
 }
 

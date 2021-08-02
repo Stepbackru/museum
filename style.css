@@ -200,6 +200,10 @@ ul {
   letter-spacing: 2px;
 }
 
+.welcome__link:hover {
+  background: #9d8665;
+}
+
 .visiting {
   padding: 75px 0;
   background: #e5e5e5;
