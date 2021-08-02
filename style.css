@@ -507,4 +507,244 @@ ul {
   font-size: 22px;
   font-weight: 300;
 }
+
+.tickets {
+  padding: 74px 0;
+  background: #030303;
+}
+
+.tickets__caption {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Forum', cursive;
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.tickets__caption::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: #710707;
+}
+
+.tickets__content {
+  padding-top: 106px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tickets__pic {
+  max-width: 720px;
+  max-height: 550px;
+}
+
+.tickets__image {
+  width: 100%;
+  height: 100%;
+}
+
+.tickets__buy {
+  padding-left: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 720px;
+      flex-basis: 720px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tickets .type__caption {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tickets .type__list {
+  padding: 50px 0 0 39px;
+}
+
+.tickets .type__item {
+  position: relative;
+}
+
+.tickets .type__item:nth-child(2) {
+  margin: 48px 0;
+}
+
+.tickets .type__input {
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.tickets .type__input:checked + .type__label::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 9px;
+  left: -34px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.tickets .type__input:checked + .type__label:hover::after {
+  background-color: #9d8665;
+}
+
+.tickets .type__label {
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.tickets .type__label:hover {
+  color: #9d8665;
+}
+
+.tickets .type__label::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  display: block;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: -40px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.tickets .type__label:hover::before {
+  border-color: #9d8665;
+}
+
+.tickets .amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.tickets .amount__caption {
+  padding-bottom: 10px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.tickets .amount__subcaption {
+  padding-bottom: 12px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.tickets .amount__choice {
+  margin-bottom: 35px;
+  width: 150px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border: 3px solid #ffffff;
+}
+
+.tickets .amount__btn, .tickets .amount__count {
+  width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.tickets .amount__btn:hover {
+  color: #9d8665;
+}
+
+.tickets .amount__count {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.tickets .amount__count:hover {
+  cursor: default;
+}
+
+.tickets .amount__count::-webkit-inner-spin-button, .tickets .amount__count::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.tickets .amount__total {
+  padding: 15px 0 50px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+}
+
+.tickets .amount__buy {
+  width: 175px;
+  height: 50px;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background-color: #ffffff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.tickets .amount__buy:hover {
+  background-color: #9d8665;
+}
 /*# sourceMappingURL=style.css.map */

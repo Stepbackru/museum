@@ -264,7 +264,6 @@
   -webkit-appearance: none;
 }
 
-
 .range::-webkit-slider-thumb {
   width: 15px;
   height: 15px;
@@ -373,5 +372,193 @@
     max-width: 720px;
     line-height: 40px;
     @include robotoFont(22px, 300, $dark-font);
+  }
+}
+
+.tickets {
+  padding: 74px 0;
+  background: $dark-bg;
+  
+  &__caption {
+    position: relative;
+    @include forumFont(80px);
+
+    &::after {
+      content: "";
+      height: 3px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -30px;
+      background: $dark-red;
+    }
+  }
+
+  &__content {
+    padding-top: 106px;
+    display: flex;
+  }
+
+  &__pic {
+    max-width: 720px;
+    max-height: 550px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__buy {
+    padding-left: 60px;
+    display: flex;
+    flex-basis: 720px;
+    justify-content: space-between;
+  }
+
+  .type {
+
+    &__caption {
+      @include robotoFont(28px, 700);
+    }
+
+    &__list {
+      padding: 50px 0 0 39px;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__item:nth-child(2) {
+      margin: 48px 0;
+    }
+
+    &__input {
+      width: 0;
+      height: 0;
+      position: absolute;
+
+      &:checked + .type__label::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        display: block;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 9px;
+        left: -34px;
+        transition: .3s;
+      }
+
+      &:checked + .type__label:hover::after {
+        background-color: $font-gold;
+      }
+    }
+
+    &__label {
+      cursor: pointer;
+      @include robotoFont(22px, 300);
+
+      &:hover {
+        color: $font-gold;
+      }
+
+      &::before {
+        content: "";
+        width: 17px;
+        height: 17px;
+        display: block;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: -40px;
+        cursor: pointer;
+        transition: .3s;
+      }
+
+      &:hover::before {
+        border-color: $font-gold;
+      }
+    }
+  }
+
+  .amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &__caption {
+      padding-bottom: 10px;
+      @include robotoFont(28px, 700);
+      text-align: right;
+    }
+
+    &__subcaption {
+      padding-bottom: 12px;
+      @include robotoFont(22px, 300);
+    }
+
+    &__choice {
+      margin-bottom: 35px;
+      width: 150px;
+      height: 50px;
+      display: flex;
+      flex-wrap: nowrap;
+      border: 3px solid #ffffff;
+    }
+
+    &__btn,
+    &__count {
+      width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include robotoFont(32px, 400);
+      text-align: center;
+      cursor: pointer;
+      transition: color .3s;
+    }
+
+    &__btn:hover {
+      color: $font-gold;
+    }
+
+    &__count {
+      @include robotoFont(22px, 300);
+      outline: none;
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+
+    &__count::-webkit-inner-spin-button,
+    &__count::-webkit-outer-spin-button {
+      appearance: none;
+    }
+
+    &__total {
+      padding: 15px 0 50px;
+      @include robotoFont(28px, 700);
+      letter-spacing: 1.65px;
+    }
+
+    &__buy {
+      width: 175px;
+      height: 50px;
+      @include robotoFont(22px, 300, $dark-font);
+      letter-spacing: 2px;
+      background-color: #ffffff;
+      transition: .3s;
+
+      &:hover {
+        background-color: $font-gold;
+      }
+    }
   }
 }
