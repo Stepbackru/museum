@@ -244,3 +244,134 @@
     height: 100%;
   }
 }
+
+.controls {
+  width: 27px;
+  height: 30px;
+  opacity: .6;
+  background-repeat: no-repeat;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.range {
+  height: 8px;
+  outline: none;
+  border-radius: 0px;
+  -webkit-appearance: none;
+}
+
+
+.range::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-appearance: none;
+}
+
+.video {
+  padding: 75px 0;
+  background: $light-bg;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__content {
+    padding-top: 15px;
+    max-width: 1440px;
+    position: relative;
+  }
+  
+  &__preview {
+    max-height: 629px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__playGeneral {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    z-index: 50;
+    transform: translateX(-50%);
+    background-image: url(./assets/images/video/generalPlay.svg);
+  }
+
+  &__controls {
+    padding: 0 41px;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $dark-font;
+  }
+
+  &__back {
+    background-image: url(./assets/images/video/backward.svg);
+  }
+
+  &__play {
+    margin-left: 7px;
+    width: 23px;
+    background-image: url(./assets/images/video/play.svg);
+  }
+
+  &__forward {
+    margin-left: 4px;
+    background-image: url(./assets/images/video/forward.svg);
+  }
+
+  &__time {
+    margin-left: 10px;
+    width: 820px;
+    background: linear-gradient(90deg, rgba(36,128,158,1) 47%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+  }
+
+  &__volume {
+    display: flex;
+    align-items: center;
+  }
+
+  &__volumeIcon {
+    margin-right: 22px;
+    width: 38px;
+    background-image: url(./assets/images/video/volume.svg);
+  }
+
+  &__volumeRange {
+    margin-right: 10px;
+    width: 155px;
+    background: linear-gradient(90deg, rgba(36,128,158,1) 47%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+  }
+
+  &__fullscreen {
+    width: 36px;
+    height: 36px;
+    background-image: url(./assets/images/video/fullscreen.svg);
+  }
+
+  &__caption {
+    padding: 40px 114px 1px 0;
+    @include forumFont(80px, $font-gold);
+  }
+
+  &__text {
+    padding-top: 42px;
+    max-width: 720px;
+    line-height: 40px;
+    @include robotoFont(22px, 300, $dark-font);
+  }
+}
