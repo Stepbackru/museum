@@ -38,7 +38,7 @@
 
   &__link {
     display: flex;
-    width: 125px;
+    width: 100%;
     height: 100%;
     line-height: 50px;
 
@@ -79,6 +79,7 @@
     display: block;
     @include robotoFont(22px, 200);
     letter-spacing: 2px;
+    transition: .3s;
 
     &:hover,
     &:active {
@@ -622,5 +623,69 @@
   &__link:hover,
   &__link:active {
     color: $font-gold;
+  }
+}
+
+.footer {
+  padding: 75px 0 80px;
+  background: $dark-bg;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    margin-right: 259px;
+    padding-top: 9px;
+    max-width: 366px;
+    display: flex;
+    justify-content: space-between;
+    
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item:nth-child(2n) {
+      padding: 18px 0;
+    }
+  }
+}
+
+.socials {
+  padding-top: 41px;
+  max-width: 336px;
+  height: 48px;
+  display: flex;
+  align-self: center;
+  gap: 24px;
+
+  &__item {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    transition: .3s;
+
+    &:hover {
+      border-color: $font-gold;
+    }
+    
+    &:hover path {
+      fill: $font-gold;
+    }
+
+    path {
+      transition: .3s;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
