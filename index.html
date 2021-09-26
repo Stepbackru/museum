@@ -32,9 +32,50 @@
   <main class="main">
     <section id="welcome" class="welcome">
       <div class="wrapper">
-        <h2 class="welcome__caption">welcome<br> to the louvre</h2>
-        <p class="welcome__text">From the castle to the museum</p>
-        <a class="welcome__link" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" aria-label="link to google maps position of louvre">Discover the Louvre</a>
+        <div class="welcome__content">
+          <h2 class="welcome__caption">welcome<br> to the louvre</h2>
+          <p class="welcome__text">From the castle to the museum</p>
+          <a class="welcome__link" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" aria-label="link to google maps position of louvre">Discover the Louvre</a>
+        </div>
+        <div class="slider">
+          <div class="slider__content">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <img class="slider__image" src="./assets/images/welcome/1.jpg" alt="slide 1">
+              </li>
+              <li class="slider__item">
+                <img class="slider__image" src="./assets/images/welcome/2.jpg" alt="slide 2">
+              </li>
+              <li class="slider__item">
+                <img class="slider__image" src="./assets/images/welcome/3.jpg" alt="slide 3">
+              </li>
+              <li class="slider__item">
+                <img class="slider__image" src="./assets/images/welcome/4.jpg" alt="slide 4">
+              </li>
+              <li class="slider__item">
+                <img class="slider__image" src="./assets/images/welcome/5.jpg" alt="slide 5">
+              </li>
+            </ul>
+          </div>
+          <div class="slider__controls">
+            <div class="slider__pages">
+              <span class="slider__pages-current">01</span>
+              <span>|</span>
+              <span class="slider__pages-total">05</span>
+            </div>
+            <ul class="pagination">
+              <li class="pagination__item pagination__item_active"></li>
+              <li class="pagination__item"></li>
+              <li class="pagination__item"></li>
+              <li class="pagination__item"></li>
+              <li class="pagination__item"></li>
+            </ul>
+            <div class="slider__arrows">
+              <button class="slider__arrow slider__arrow_left"></button>
+              <button class="slider__arrow slider__arrow_right"></button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="visiting" class="visiting">
