@@ -243,6 +243,97 @@ ul {
   position: absolute;
 }
 
+.welcome .slider__controls {
+  padding: 0 75px;
+  width: 600px;
+  height: 120px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #030303;
+  z-index: 5;
+}
+
+.welcome .slider__pages {
+  width: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.welcome .slider .pagination {
+  width: 180px;
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.welcome .slider .pagination__item {
+  display: block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.welcome .slider .pagination__item_active {
+  background-color: #d2b183;
+}
+
+.welcome .slider__arrows {
+  width: 80px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.welcome .slider__arrow {
+  width: 30px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(./assets/images/icons/arrow-left.svg);
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s;
+}
+
+.welcome .slider__arrow:hover {
+  -webkit-filter: invert(57%) sepia(8%) saturate(1508%) hue-rotate(356deg) brightness(93%) contrast(82%);
+          filter: invert(57%) sepia(8%) saturate(1508%) hue-rotate(356deg) brightness(93%) contrast(82%);
+}
+
+.welcome .slider__arrow_right {
+  background-image: url(./assets/images/icons/arrow-right.svg);
+}
+
 .visiting {
   padding: 75px 0;
   background: #e5e5e5;
