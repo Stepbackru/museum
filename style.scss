@@ -8,25 +8,21 @@
 }
 
 .header {
-  height: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
   background: $dark-bg;
 
   .wrapper {
     display: flex;
-    align-items: center;
-  }
-
-  &__row {
-    width: 100%;
-    height: 50px;
-    display: flex;
+    flex: 1;
     justify-content: space-between;
     align-items: center;
   }
 }
 
 .logo {
-  max-width: 195px;
+  width: 199px;
   height: 100%;
   display: flex;
 
@@ -37,10 +33,11 @@
   }
 
   &__link {
-    display: flex;
     width: 100%;
     height: 100%;
-    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &:hover > .logo__caption {
       color: $font-gold;
@@ -52,7 +49,6 @@
   }
 
   &__caption {
-    padding-left: 21px;
     @include forumFont(28px);
     transition: .3s;
   }
@@ -62,18 +58,21 @@
   }
 }
 
+.header-nav {
+  max-width: 775px;
+  flex: 1;
+}
+
 .menu {
-  max-width: 720px;
-  flex-grow: 1;
+  max-width: 775px;
+  flex: 1;
   
   &__list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__link {
-    padding: 3px 0;
     width: 100%;
     height: 100%;
     display: block;
@@ -81,9 +80,12 @@
     letter-spacing: 2px;
     transition: .3s;
 
-    &:hover,
-    &:active {
+    &:hover {
       color: $font-gold;
+    }
+
+    &:active {
+      color: $font-gold2;
     }
   }
 }
