@@ -350,11 +350,33 @@
     padding-top: 15px;
     max-width: 720px;
     max-height: calc(700px + 15px);
+    position: relative;
+    overflow: hidden;
   }
 
   &__image {
     width: 100%;
     height: 100%;
+  }
+
+  &__image-basic {
+    width: 440px;
+    height: 700px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background-image: url(./assets/images/explore/meninas2.jpg);
+  }
+
+  &__devider {
+    width: 39px;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    left: 421px;
+    background-image: url(./assets/images/explore/explore_slider.svg);
+    background-position: 50% 50%;
+    cursor: pointer;
   }
 }
 
