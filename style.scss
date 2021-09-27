@@ -414,23 +414,39 @@
 
   .wrapper {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
   }
 
-  &__content {
-    padding-top: 15px;
-    max-width: 1440px;
-    position: relative;
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   
-  &__preview {
-    max-height: 629px;
+  &__caption {
+    @include forumFont(80px, $font-gold);
   }
 
-  &__image {
+  &__text {
+    padding-top: 7px;
+    max-width: 720px;
+    line-height: 40px;
+    @include robotoFont(22px, 300, $dark-font);
+  }
+
+  &__content {
     width: 100%;
-    height: 100%;
+    margin: 75px 0 40px;
+    position: relative;
+    font-size: 0;
+  }
+
+  &__video {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
   }
 
   &__playGeneral {
@@ -442,53 +458,40 @@
     z-index: 50;
     transform: translateX(-50%);
     background-image: url(./assets/images/video/generalPlay.svg);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__controls {
-    padding: 0 41px;
+    padding: 0 30px;
     height: 85px;
     display: flex;
+    gap: 50px;
     justify-content: space-between;
     align-items: center;
     background: $dark-font;
   }
 
-  &__back {
-    background-image: url(./assets/images/video/backward.svg);
-  }
-
   &__play {
-    margin-left: 7px;
     width: 23px;
     background-image: url(./assets/images/video/play.svg);
   }
 
-  &__forward {
-    margin-left: 4px;
-    background-image: url(./assets/images/video/forward.svg);
-  }
-
   &__time {
-    margin-left: 10px;
-    width: 820px;
-    background: linear-gradient(90deg, rgba(36,128,158,1) 47%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
-  }
-
-  &__volume {
-    display: flex;
-    align-items: center;
+    width: 929px;
+    background: linear-gradient(to right, #710707 0%, #710707 54%, #c4c4c4 54%, #c4c4c4 100%);
   }
 
   &__volumeIcon {
-    margin-right: 22px;
     width: 38px;
     background-image: url(./assets/images/video/volume.svg);
   }
 
   &__volumeRange {
-    margin-right: 10px;
     width: 155px;
-    background: linear-gradient(90deg, rgba(36,128,158,1) 47%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, #710707 0%, #710707 45%, #c4c4c4 45%, #c4c4c4 100%);
   }
 
   &__fullscreen {
@@ -497,16 +500,67 @@
     background-image: url(./assets/images/video/fullscreen.svg);
   }
 
-  &__caption {
-    padding: 40px 114px 1px 0;
-    @include forumFont(80px, $font-gold);
-  }
+  .slider {
+    padding: 2px 0;
+    width: 100%;
+    height: 310px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 
-  &__text {
-    padding-top: 42px;
-    max-width: 720px;
-    line-height: 40px;
-    @include robotoFont(22px, 300, $dark-font);
+    &__content {
+      position: absolute;
+      display: flex;
+      gap: 42px;
+    }
+
+    &__frame {
+      width: 452px;
+      height: 254px;
+      border: 0;
+    }
+
+    &__pagination {
+      width: 200px;
+      height: 12px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__arrow {
+      width: 10px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__pages {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__page {
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $pagination-video-bg;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    &__page_active {
+      background-color: $pagination-video-active-bg;
+    }
   }
 }
 
